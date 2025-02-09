@@ -34,7 +34,7 @@ document.getElementById("finalYesBtn").addEventListener("click", function() {
   document.getElementById("finalYesBtn").style.display = "none";
   // Display final message on the page
   var finalMessage = document.getElementById("finalMessage");
-  finalMessage.innerText = "Eo ơi tun lucky quá!!";
+  finalMessage.innerText = "Hihi ik ken je will choose ja:))";
   finalMessage.style.display = "block";
 });
 

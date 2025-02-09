@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine's Day Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Stage 1: Ask for name and availability -->
+  <div id="stage1" class="container">
+    <h1>Hi! What's your name?</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button id="submitName" class="action-btn">Submit</button>
+    
+    <div id="question" style="display: none; position: relative; height: 120px; margin-top: 20px;">
+      <p id="questionText"></p>
+      <button id="yesBtn" class="action-btn" style="position: absolute; left: 20px; bottom: 10px;">Yes</button>
+      <button id="noBtn" class="action-btn" style="position: absolute; left: 120px; bottom: 10px;">No</button>
+    </div>
+  </div>
+
+  <!-- Stage 2: After the "Yes" button is clicked -->
+  <div id="stage2" class="container" style="display: none;">
+    <p>Awesome!</p>
+    <p>Will you be my Valentine?</p>
+    <button id="finalYesBtn" class="action-btn">Yes</button>
+  </div>
+
+  <!-- Background music element -->
+  <audio id="bgMusic" loop>
+    <!-- Update the src attribute if you place your file in a subfolder -->
+    <source src="background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

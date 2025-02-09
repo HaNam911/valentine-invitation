@@ -12,7 +12,7 @@ document.getElementById("yesBtn").addEventListener("click", function() {
   document.getElementById("stage2").style.display = "block";
 });
 
-// Function to move the "Nee" button to a random position on the screen
+// Function to move the "Nee" button to a random position anywhere on the screen
 function moveNoButton() {
   var noBtn = document.getElementById("noBtn");
   var screenWidth = window.innerWidth - noBtn.offsetWidth;
@@ -24,13 +24,18 @@ function moveNoButton() {
   noBtn.style.top = randomTop + "px";
 }
 var noBtn = document.getElementById("noBtn");
-// Use both mouseover and touchstart events for desktop and mobile
+// Add both mouseover and touchstart events for desktop and mobile devices
 noBtn.addEventListener("mouseover", moveNoButton);
 noBtn.addEventListener("touchstart", moveNoButton);
 
-// When the final "Ja" is clicked in Stage 2, show the final alert
+// When the final "Ja" is clicked in Stage 2, display the final message
 document.getElementById("finalYesBtn").addEventListener("click", function() {
-  alert("Eo ơi tun lucky quá!!");
+  // Optionally hide the finalYes button after click
+  document.getElementById("finalYesBtn").style.display = "none";
+  // Display final message on the page
+  var finalMessage = document.getElementById("finalMessage");
+  finalMessage.innerText = "Eo ơi tun lucky quá!!";
+  finalMessage.style.display = "block";
 });
 
 // Create floating emojis (cat, dog, heart) that move gently around the screen
@@ -47,7 +52,6 @@ function createFloatingEmoji(emoji) {
   document.body.appendChild(span);
 }
 
-// List of emojis to use
 var emojis = ["🐱", "🐶", "❤️"];
 // Create 10 floating emoji elements (cycling through the emoji list)
 for (var i = 0; i < 10; i++) {
